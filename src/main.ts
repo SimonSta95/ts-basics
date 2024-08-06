@@ -1,4 +1,5 @@
 import "./style.css"
+
 //1
 let numbers : number[] = [1,2,3,4,5,6,7,8,9,10];
 console.log(numbers)
@@ -26,9 +27,10 @@ console.log("Sort desc: " + liste.sort((a,b) => b - a))
 console.log("Quadriert: " + liste.map(number => number*number))
 
 const sortedList: number[] = liste.sort((a,b) => b - a)
-const filteredList: number[] = sortedList.slice(2, -4)
+const filteredList: number[] = sortedList.slice(4, -2)
 const resultList: number[] = liste.filter(number => filteredList.includes(number))
 console.log(resultList)
 
-console.log("durch 4 teilbar: " + liste.filter(number => number% 4 !== 0))
-console.log("Sum: " + liste.reduce((res,number) => res + number,0))
+let resultList2 = resultList.filter(number => number% 4 !== 0)
+console.log(resultList2)
+console.log("Sum: " + resultList2.reduce((res,number) => res + number,0))
