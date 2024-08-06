@@ -24,4 +24,11 @@ const liste = [15, 6, 3213, 9, 0, 12, 8464 , 1, 1264, 481, 186, 1031, 194];
 console.log("BONUS")
 console.log("Sort desc: " + liste.sort((a,b) => b - a))
 console.log("Quadriert: " + liste.map(number => number*number))
+
+const sortedList: number[] = liste.sort((a,b) => b - a)
+const filteredList: number[] = sortedList.slice(2, -4)
+const resultList: number[] = liste.filter(number => filteredList.includes(number))
+console.log(resultList)
+
+console.log("durch 4 teilbar: " + liste.filter(number => number% 4 !== 0))
 console.log("Sum: " + liste.reduce((res,number) => res + number,0))
